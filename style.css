@@ -1,0 +1,200 @@
+body{
+  margin: 0px;
+}
+.topBar{
+  display: flex;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+  background-color: rgb(75, 62, 87);
+}
+.topBar #menu{
+  float: left;
+  font-size:16px;
+  padding: 16px;
+}
+.titleName{
+  line-height: 55px;
+  margin: 0 auto;
+  padding-left: 165px;
+  font-size: 30px;
+  color:white;
+}
+.topBar #menuBar{
+  padding-left: 0px;
+  float: right;
+}
+.topBar li{
+  display: inline;
+  font-size:16px;
+  padding: 16px;
+}
+.topBar a{
+  text-decoration: none;
+  color:white;
+}
+
+.slideBannerContainer {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.slideBox {
+  margin:0px;
+  padding:0px;
+}
+.slide {
+  min-width: 100%;
+  height: 350px;
+}
+.slideImg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  object-fit: cover;
+  object-position: center 45%;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slideContents{
+  position: absolute; /*배너 내 위치하도록 조정*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* 글자 색상 설정 */
+  font-size: 20px;
+  text-shadow: 1px 1px black;
+  font-family: 'Orbit', sans-serif;
+  text-align: center;
+  z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
+}
+.title_I{
+  color: aquamarine;
+}
+.title_LO{
+  color: plum;
+}
+.title_HA{
+  color: palegoldenrod;
+}
+
+@media all and (max-width:600px){
+  #menuBar{
+    display: none;
+  }
+  .slideContents1{
+    font-size: 16px;
+  }
+}
+
+#catch{
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+#tripList{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /*반응형, 줄이면 세로 정렬*/
+  margin-bottom: 100px;
+}
+.tripCard1{
+  margin:40px;
+  width:250px;
+  height: 300px;
+  background-color: rgb(96, 193, 160);
+  box-shadow: 5px 5px 7px gray;
+  border-radius: 16px;
+}
+.tripCard1:hover{
+  transform: scale(1.1);
+}
+.tripCard2{
+  margin:40px;
+  width:250px;
+  height: 300px;
+  background-color: rgb(238, 129, 165);
+  box-shadow: 5px 5px 7px gray;
+  border-radius: 16px;
+}
+.tripCard2:hover{
+  transform: scale(1.1);
+}
+.tripCard3{
+  margin:40px;
+  width:250px;
+  height: 300px;
+  background-color: rgb(204, 194, 159);
+  box-shadow: 5px 5px 7px gray;
+  border-radius: 16px;
+}
+.tripCard3:hover{
+  transform: scale(1.1);
+}
+.imgContainer{
+  position: relative;
+  overflow: hidden;
+}
+.tripImg{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width:50%;
+  transition: transform 0.3s ease-in-out;
+}
+.tripImg:hover {
+  transform: scale(1.1);
+}
+.imgSource{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.294);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.imgSource:hover{
+  opacity: 1;
+}
+.tripContents li{
+  list-style-type: none;
+  padding: 4px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.tripLink{
+  font-size: 18px;
+  text-align: center;
+  margin: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+.tripLink:hover{
+  background-color: rgb(250, 226, 255);
+  border: 2px solid rgb(250, 226, 255);
+  cursor: pointer;
+}
+.tripLink a{
+  text-decoration: none;
+  font-family: 'Nanum Gothic', sans-serif;
+}
