@@ -10,18 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Nanum+Gothic&family=Orbit&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mainStyle.css">
   </head>
 
   <body>
     <div class="topBar">
-      <a href="" id="menu"><b>Menu</b></a>
-      <div class="titleName"><b>ILOHA</b></div>
-      <ul id="menuBar">
-        <li><a href=""><b>Home</b></a></li>
-        <li><a href=""><b>Login</b></a></li>
-        <li><a href=""><b>My page<b></a></li>
-      </ul>
+      <div class="menuBtn" onclick="toggleMenu()"><b>Menu</b></div>
+      <div class="menuBox">
+        <a href="">Home</a>
+        <a href="loginPage.html">Login</a>
+        <a href="">My page</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </div>
+      <div class="titleName">
+        <a href="index.html"><b>ILOHA</b></a>
+      </div>
+      <div class="menuBar">
+        <span><a href="loginPage.html"><b>Login</b></a></span>
+        <span><a href=""><b>My page</b></a></span>
+      </div>
     </div>
     
     <div class="slideBannerContainer">

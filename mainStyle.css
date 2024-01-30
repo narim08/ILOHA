@@ -1,38 +1,58 @@
 body{
   margin: 0px;
+  padding: 0px;
 }
 .topBar{
+  position: relative;
   display: flex;
+  justify-content: space-between; /*가로정렬: 자식 요소들끼리 최대한 멀리 배치*/
+  align-items: center; /*세로 정렬 (위아래 공간 똑같이)*/
   height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 16px;
+  padding: 7px 30px;
   background-color: rgb(75, 62, 87);
 }
-.topBar #menu{
-  float: left;
-  font-size:16px;
-  padding: 16px;
-}
-.titleName{
-  line-height: 55px;
-  margin: 0 auto;
-  padding-left: 165px;
-  font-size: 30px;
+.topBar .menuBtn{
+  cursor: pointer;
   color:white;
-}
-.topBar #menuBar{
-  padding-left: 0px;
-  float: right;
-}
-.topBar li{
-  display: inline;
   font-size:16px;
-  padding: 16px;
+}
+.topBar .menuBox{
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width:250px;
+  height: 100%;
+  background-color: rgb(118, 83, 150);
+  padding-top: 50px;
+  transition: 0.5s;
+  z-index: 2;
+  opacity: 0.9;
+}
+.menuBox a{
+  display: block;
+  margin: 10px 5px;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.menuBox a:hover{
+  background-color: rgb(172, 113, 228);
+}
+.topBar .titleName{
+  position: absolute; /*부모를 기준으로 상대적 위치, 정중앙 오게함*/
+  left: 50%;
+  transform: translateX(-50%); /*정확히 중앙에 오게 함*/
+  margin: auto;
+  color:white;
+  font-size: 30px;
+}
+.topBar .menuBar{
+  font-size:16px;
 }
 .topBar a{
   text-decoration: none;
   color:white;
+  padding: 10px;
 }
 
 .slideBannerContainer {
@@ -90,10 +110,10 @@ body{
 }
 
 @media all and (max-width:600px){
-  #menuBar{
+  .menuBar{
     display: none;
   }
-  .slideContents1{
+  .slideContents{
     font-size: 16px;
   }
 }

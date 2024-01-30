@@ -21,3 +21,11 @@ function showSlides() {
   setTimeout(showSlides, 4000);
 }
 
+//menu
+function toggleMenu() {
+  const menu = document.querySelector('.menuBox');
+  const computeStyle = window.getComputedStyle(menu);
+  const currentLeft = computeStyle.getPropertyValue('left');
+
+  menu.style.left = (currentLeft === '0px' || currentLeft === '') ? '-250px' : '0px';
+}

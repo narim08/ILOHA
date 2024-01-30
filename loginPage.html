@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ILOHA-Login</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Orbit&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Nanum+Gothic&family=Orbit&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="loginStyle.css">
+  </head>
+  
+  <body>
+    <div class="wrap">
+      <div class="titleName">
+        <h1><a href="index.html"><span class="title_I">I</span><span class="title_LO">LO</span><span class="title_HA">HA</span></a></h1>
+      </div>
+      <form method="post" action="" id="loginForm">
+        <input type="text" name="Id" placeholder="아이디">
+        <input type="password" name="Pw" placeholder="비밀번호">
+        <label for="keepLogin"> <!--label for로 하면 같은 이름의 공간을 클릭해도 동일한 효과(문자 클릭해도 체크됨)-->
+          <input type="checkbox" id="keepLogin">
+          로그인 유지하기
+        </label> 
+        <input type="submit" id="loginBtn" value="로그인">
+      </form>
+      <div class="signUp">
+        <span class="des">회원이 아니신가요? </span><span class="sign"><a href>회원가입 하기</a></span>
+      </div>
+    </div>
+    <script src="loginPage.js"></script>
+  </body>
+</html>
